@@ -1,4 +1,4 @@
-package com.sweater.Telegram;
+package com.sweater;
 
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -23,14 +23,14 @@ public class Bot extends TelegramLongPollingBot {
     }
 
     //метод для настройки сообщения и его отправки
-    public void SendMSG(Message message, String text){
+    public void SendMsg(Message message, String text){
         SendMessage sendMessage = new SendMessage();
         sendMessage.enableMarkdown(true);
         sendMessage.setChatId(message.getChatId().toString());
         sendMessage.setReplyToMessageId(message.getMessageId());
         sendMessage.setText(text);
         try {
-            sendMessage(sendMessage);
+            execute(sendMessage);
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
@@ -42,8 +42,12 @@ public class Bot extends TelegramLongPollingBot {
         Message message = update.getMessage();
         if (message != null && message.hasText()){
             switch(message.getText()){
-                case "/are you working?":
-                    SendMSG(message, "yes, I am!");
+                case "/start":
+                    SendMsg(message, "Hello and welcome to Idea - the app that will not let your ideas be forgotten!");
+                    break;
+
+                case "/test":
+                    SendMsg(message, "I am working just fine!");
                     break;
             }
         }
