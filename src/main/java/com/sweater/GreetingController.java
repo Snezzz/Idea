@@ -2,6 +2,8 @@ package com.sweater;
 
 import com.sweater.entities.Notes;
 import com.sweater.entities.User;
+import com.sweater.enums.NoteType;
+import com.sweater.enums.Priority;
 import com.sweater.repositories.NotesRepository;
 import com.sweater.repositories.TagRepository;
 import com.sweater.repositories.UserRepository;
@@ -47,9 +49,9 @@ public class GreetingController {
     public String getNotes(Map<String,Object> model) {
 
         notesService.save(new Notes(1,"firstNote",1,110,
-                "здесь заметка",new java.util.Date(),"note",5));
+                "здесь заметка",new java.util.Date(),NoteType.Note,Priority.FIVE));
         notesService.save(new Notes(2,"secondNote",1,10,
-                "и тут заметка",new java.util.Date(),"note",4));
+                "и тут заметка",new java.util.Date(),NoteType.Note,Priority.FOUR));
         Iterable<Notes> notes = notesService.findAll();
         model.put("notes",notes);
         return "notes";

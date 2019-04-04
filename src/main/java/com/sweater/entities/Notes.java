@@ -1,6 +1,9 @@
 package com.sweater.entities;
 
 
+import com.sweater.enums.NoteType;
+import com.sweater.enums.Priority;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,15 +22,15 @@ public class Notes {
     private int tags;
     private String text;
     private Date creationDate;
-    private String type;
-    private int priority;
+    private NoteType type;
+    private Priority priority;
     //getters and setters
 
    public Notes() {
 
     }
 
-   public Notes(int id, String title, int userId, int tags, String text, Date date, String type, int priority) {
+   public Notes(int id, String title, int userId, int tags, String text, Date date, NoteType type,Priority priority) {
         this.id = id;
         this.title = title;
         this.userId = userId;
@@ -86,19 +89,19 @@ public class Notes {
         this.creationDate = creationDate;
     }
 
-    public String getType() {
+    public NoteType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(NoteType type) {
         this.type = type;
     }
 
-    public int getPriority() {
+    public Priority getPriority() {
         return priority;
     }
 
-    public void setPriority(int priority) {
+    public void setPriority(Priority priority) {
         this.priority = priority;
     }
 }
