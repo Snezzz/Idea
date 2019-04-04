@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Список пользователей:</div>
+<table>
+    <tr>
+        <td>id</td>
+        <td>FirstName</td>
+        <td>Password</td>
+    </tr>
+{{#users}}
+    <tr>
+            <td>{{id}}</td>
+            <td>{{userName}}</td>
+            <td>{{password}}</td>
+    </tr>
+        {{/users}}
+</table>
+</body>
+</html>
