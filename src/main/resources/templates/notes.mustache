@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Idea Project</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>Список заметок:</div>
+<table>
+    <tr>
+        <td>id</td>
+        <td>title</td>
+        <td>userId</td>
+        <td>tags</td>
+        <td>text</td>
+        <td>creationDate</td>
+        <td>type</td>
+        <td>priority</td>
+    </tr>
+    {{#notes}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{title}}</td>
+        <td>{{userId}}</td>
+        <td>{{tags}}</td>
+        <td>{{text}}</td>
+        <td>{{creationDate}}</td>
+        <td>{{type}}</td>
+        <td>{{priority}}</td>
+    </tr>
+    {{/notes}}
+</table>
+
+</body>
+</html>
