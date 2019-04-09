@@ -56,19 +56,6 @@ public class GreetingController {
         model.put("notes",notes);
         return "notes";
     }
-
-
-
-
-  /*  @GetMapping("/test")
-    //name - название параметра (для обращения из шаблона)
-    public String show(Map<String,Object> model) {
-        userService.save(new User1(1,"Петя","Васечкин"));
-        userService.save(new User1(2,"Женя","Егорова"));
-        Iterable<User1> users = this.userService.findAll();
-        model.put("users",users);
-        return "test";
-    }
-*/
+ }
 
 }
