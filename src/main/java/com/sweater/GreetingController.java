@@ -56,6 +56,6 @@ public class GreetingController {
         model.put("notes",notes);
         return "notes";
     }
- 
+
 
 }
