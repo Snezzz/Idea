@@ -4,11 +4,9 @@ package com.sweater.entities;
 import com.sweater.enums.NoteType;
 import com.sweater.enums.Priority;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "notes_table")
@@ -19,7 +17,9 @@ public class Notes {
     private int id;
     private String title;
     private int userId;
-    private int tags;
+    //????
+    @OneToMany( )
+    private Set<Tag> tags;
     private String text;
     private Date creationDate;
     private NoteType type;
@@ -30,7 +30,7 @@ public class Notes {
 
     }
 
-   public Notes(int id, String title, int userId, int tags, String text, Date date, NoteType type,Priority priority) {
+   public Notes(int id, String title, int userId, Set<Tag> tags, String text, Date date, NoteType type,Priority priority) {
         this.id = id;
         this.title = title;
         this.userId = userId;
@@ -65,11 +65,11 @@ public class Notes {
         this.userId = userId;
     }
 
-    public int getTags() {
+    public Set<Tag> getTags() {
         return tags;
     }
 
-    public void setTags(int tags) {
+    public void setTags(Set<Tag> tags) {
         this.tags = tags;
     }
 
