@@ -39,21 +39,6 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Telegram API -->
-        <dependency>
-            <groupId>org.telegram</groupId>
-            <artifactId>telegrambots</artifactId>
-            <version>4.0.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.telegram</groupId>
-            <artifactId>telegrambotsextensions</artifactId>
-            <version>4.0.0</version>
-        </dependency>
-
-    </dependencies>
-
     <properties>
         <java.version>1.8</java.version>
     </properties>
