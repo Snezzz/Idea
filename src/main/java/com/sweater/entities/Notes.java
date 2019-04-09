@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name = "Notes")
+@Table(name = "notes_table")
 public class Notes {
 
     @Id

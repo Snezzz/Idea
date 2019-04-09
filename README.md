@@ -22,3 +22,9 @@
 2.Edit Configurations - "+" - Application - Main class: (здесь указать Application)  
 3.Собрать проект (Run)  
 4.в браузере: http://localhost:8083/hello-world  
+
+**Подключение к консоли БД:**  
+http://localhost:8083/h2-console  
+**JDBC URL**: jdbc:h2:mem:testdb  
+**User Name**: girls;  
+**Password**: 321;
