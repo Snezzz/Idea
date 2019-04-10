@@ -22,7 +22,7 @@ public class TagService {
         return tagRepository.findAll();
     }
 
-    //тэг по идентификатору
+    //выводит тэг по идентификатору
     public Tag getTagById(int id) {
         return tagRepository.findById(id).get();
     }
