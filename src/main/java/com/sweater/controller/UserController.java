@@ -10,8 +10,13 @@ import java.util.List;
 @RestController
 public class UserController {
 
+
+    private final UserService userService;
+
     @Autowired
-    private UserService userService;
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/users")
     public List<User> getUsers(){
@@ -25,8 +30,8 @@ public class UserController {
     public void deleteUser(@RequestBody User user){
         userService.deleteUser(user);
     }
-    @DeleteMapping("/userById")
-    public void deleteUserById(@RequestBody int id){
+    @DeleteMapping("/user/{id}")
+    public void deleteUserById(@PathVariable int id){
         userService.deleteUserById(id);
     }
 
