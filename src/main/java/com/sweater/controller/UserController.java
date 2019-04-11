@@ -22,6 +22,10 @@ public class UserController {
     public List<User> getUsers(){
         return userService.getUsers();
     }
+    @GetMapping("/user/{id}")
+    public User getUser(@PathVariable int id){
+        return userService.getUserById(id);
+    }
     @PostMapping("/user")
     public void addUser(@RequestBody User user){
         userService.addUser(user);
