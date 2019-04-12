@@ -26,7 +26,7 @@ public class NoteController {
     }
 
 
-    @GetMapping("noteById/{id}")
+    @GetMapping("note/{id}")
     @ResponseBody
     public Notes getNoteById(@PathVariable("id") Integer id) {
         return noteService.getNoteById(id);
@@ -38,7 +38,7 @@ public class NoteController {
         noteService.updateNote(note);
     }
 
-    @DeleteMapping("noteById/{id}")
+    @DeleteMapping("note/{id}")
     @ResponseBody
     public void  deleteNote(@PathVariable("id") Integer id) {
         noteService.deleteNote(id);
