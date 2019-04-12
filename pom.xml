@@ -49,6 +49,19 @@
             <artifactId>mockito-all</artifactId>
             <version>1.9.5</version>
         </dependency>
+             
+        <!-- Telegram API -->
+        <dependency>
+            <groupId>org.telegram</groupId>
+            <artifactId>telegrambots</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.telegram</groupId>
+            <artifactId>telegrambotsextensions</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
     </dependencies>             
              
     <properties>
