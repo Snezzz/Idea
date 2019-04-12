@@ -24,8 +24,8 @@ public class TagController {
     }
 
     //выводит тэг по идентификатору
-    @GetMapping("/tagById")
-    public Tag getTagById(@RequestBody int id) {
+    @GetMapping("/tag/{id}")
+    public Tag getTagById(@PathVariable int id) {
         return tagService.getTagById(id);
     }
 
@@ -42,8 +42,8 @@ public class TagController {
     }
 
     //удаляет тэг по идентификатору
-    @DeleteMapping("/tagById")
-    public void deleteTagById(@RequestBody int id) {
+    @DeleteMapping("/tag/{id}")
+    public void deleteTagById(@PathVariable int id) {
         tagService.deleteTagById(id);
     }
 
