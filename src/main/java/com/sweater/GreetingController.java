@@ -44,7 +44,7 @@ public class GreetingController {
         model.put("users",users);
         return "test";
     }
-    @GetMapping("/notes")
+    @GetMapping("/notestest")
     //name - название параметра (для обращения из шаблона)
     public String getNotes(Map<String,Object> model) {
 

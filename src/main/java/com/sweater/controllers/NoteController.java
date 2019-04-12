@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-@Controller
+@RestController
 public class NoteController {
     private NoteService noteService;
 
@@ -20,35 +20,33 @@ public class NoteController {
     }
 
     @GetMapping("notes")
-    public ResponseEntity<List<Notes>> getAllNotes() {
-        List<Notes> list = noteService.getAllNotes();
-        return new ResponseEntity<List<Notes>>(list, HttpStatus.OK);
+    @ResponseBody
+    public List<Notes> getAllNotes() {
+        return noteService.getAllNotes();
     }
 
 
-    @GetMapping("note/{id}")
-    public ResponseEntity<Notes> getNoteById(@PathVariable("id") Integer id) {
-        Notes article = noteService.getNoteById(id);
-        return new ResponseEntity<Notes>(article, HttpStatus.OK);
+    @GetMapping("noteById/{id}")
+    @ResponseBody
+    public Notes getNoteById(@PathVariable("id") Integer id) {
+        return noteService.getNoteById(id);
     }
 
     @PutMapping("note")
-    public ResponseEntity<Notes> updateNote(@RequestBody Notes article) {
-        noteService.updateNote(article);
-        return new ResponseEntity<Notes>(article, HttpStatus.OK);
+    @ResponseBody
+    public void updateNote(@RequestBody Notes note) {
+        noteService.updateNote(note);
     }
 
-    @DeleteMapping("note/{id}")
-    public ResponseEntity<Void> deleteNote(@PathVariable("id") Integer id) {
+    @DeleteMapping("noteById/{id}")
+    @ResponseBody
+    public void  deleteNote(@PathVariable("id") Integer id) {
         noteService.deleteNote(id);
-        return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     }
+
     @PostMapping("note")
-    public ResponseEntity<Notes> addNote(@RequestBody Notes note) {
+    @ResponseBody
+    public void addNote(@RequestBody Notes note) {
         noteService.addNote(note);
-        return new ResponseEntity<Notes>(note, HttpStatus.OK);
-
-
-
     }
 }
