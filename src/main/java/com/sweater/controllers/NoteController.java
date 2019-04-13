@@ -20,32 +20,32 @@ public class NoteController {
     }
 
     @GetMapping("notes")
-    @ResponseBody
+    
     public List<Notes> getAllNotes() {
         return noteService.getAllNotes();
     }
 
 
     @GetMapping("note/{id}")
-    @ResponseBody
+    
     public Notes getNoteById(@PathVariable("id") Integer id) {
         return noteService.getNoteById(id);
     }
 
     @PutMapping("note")
-    @ResponseBody
+ 
     public void updateNote(@RequestBody Notes note) {
         noteService.updateNote(note);
     }
 
     @DeleteMapping("note/{id}")
-    @ResponseBody
+   
     public void  deleteNote(@PathVariable("id") Integer id) {
         noteService.deleteNote(id);
     }
 
     @PostMapping("note")
-    @ResponseBody
+    
     public void addNote(@RequestBody Notes note) {
         noteService.addNote(note);
     }
