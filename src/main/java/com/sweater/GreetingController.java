@@ -4,12 +4,16 @@ import com.sweater.entities.Notes;
 import com.sweater.entities.User;
 import com.sweater.enums.NoteType;
 import com.sweater.enums.Priority;
+import com.sweater.exceptions.NotFoundException;
 import com.sweater.repositories.NotesRepository;
 import com.sweater.repositories.TagRepository;
 import com.sweater.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
@@ -57,5 +61,9 @@ public class GreetingController {
         return "notes";
     }
 
+    @RequestMapping(value = "/hello-world", method = RequestMethod.PUT)
+    public ResponseEntity<Object> updateProduct() {
+        throw new NotFoundException();
+    }
 
 }
