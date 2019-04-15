@@ -20,6 +20,7 @@ public class Notes {
     //????
     @OneToMany( )
     private Set<Tag> tags;
+    @Column(length = 1000)
     private String text;
     private Date creationDate;
     private NoteType type;
