@@ -1,7 +1,7 @@
-package com.sweater.controller;
+package com.sweater.controllers;
 
 import com.sweater.entities.User;
-import com.sweater.service.UserService;
+import com.sweater.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

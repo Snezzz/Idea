@@ -1,4 +1,4 @@
-package com.sweater.service;
+package com.sweater.services;
 
 import com.sweater.entities.User;
 import com.sweater.repositories.UserRepository;

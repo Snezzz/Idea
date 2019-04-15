@@ -13,12 +13,6 @@ import java.util.Map;
 @Controller
 public class GreetingController {
 
-
-    @Autowired // This means to get the bean called userRepository
-    private NotesRepository notesRepository;
-    @Autowired // This means to get the bean called userRepository
-    private TagRepository tagRepository;
-
     @GetMapping("/hello-world")
     //name - название параметра (для обращения из шаблона)
     public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World")
