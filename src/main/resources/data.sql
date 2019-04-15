@@ -54,3 +54,16 @@ insert into TAG_TABLE values (7,'идея');
 insert into TAG_TABLE values (8,'философия');
 insert into TAG_TABLE values (9,'важно');
 insert into TAG_TABLE values (10,'успех');
+
+
+insert into NOTES_TABLE_TAGS values (1,4);
+insert into NOTES_TABLE_TAGS values (1,10);
+insert into NOTES_TABLE_TAGS values (2,2);
+insert into NOTES_TABLE_TAGS values (2,4);
+insert into NOTES_TABLE_TAGS values (2,8);
+insert into NOTES_TABLE_TAGS values (3,4);
+insert into NOTES_TABLE_TAGS values (3,8);
+insert into NOTES_TABLE_TAGS values (8,9);
+insert into NOTES_TABLE_TAGS values (20,2);
+insert into NOTES_TABLE_TAGS values (20,4);
+insert into NOTES_TABLE_TAGS values (20,8);
