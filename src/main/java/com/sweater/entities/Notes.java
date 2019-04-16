@@ -17,8 +17,8 @@ public class Notes {
     private int id;
     private String title;
     private int userId;
-    //????
-    @OneToMany( )
+  
+    @ManyToMany
     private Set<Tag> tags;
     @Column(length = 1000)
     private String text;
