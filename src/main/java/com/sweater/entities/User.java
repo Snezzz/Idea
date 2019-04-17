@@ -1,9 +1,8 @@
 package com.sweater.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.sweater.enums.UserRole;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "user_table")
@@ -14,16 +13,23 @@ public class User {
     private int id;
     private String userName;
     private String password;
+    private UserRole userrole;
+    @Transient
+    private String passwordConfirm;
+
     //getters and setters
 
     public User() {
 
     }
 
-    public User(int id, String name, String password) {
+    public User(int id, String name, String password, UserRole userrole,  String passwordConfirm) {
         this.id = id;
         this.userName = name;
         this.password = password;
+        this.userrole = userrole;
+        this.passwordConfirm = passwordConfirm;
+
     }
 
     public int getId() {
@@ -48,5 +54,21 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public  UserRole getRole() {
+        return userrole;
+    }
+
+    public void setRole(UserRole userrole) {
+        this.userrole = userrole;
+    }
+
+    public String getPasswordConfirm() {
+        return passwordConfirm;
+    }
+
+    public void setPasswordConfirm(String passwordConfirm) {
+        this.passwordConfirm = passwordConfirm;
     }
 }
