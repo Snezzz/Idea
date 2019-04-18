@@ -1,9 +1,6 @@
 package com.sweater;
 
 import com.sweater.exceptions.NotFoundException;
-import com.sweater.repositories.NotesRepository;
-import com.sweater.repositories.TagRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,5 +26,6 @@ public class GreetingController {
     public ResponseEntity<Object> updateProduct() {
         throw new NotFoundException();
     }
+}
 
 
