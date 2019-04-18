@@ -25,9 +25,9 @@ public class UserController {
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @GetMapping("/user/{id}")
-    public User getUser(@PathVariable int id){
-        return userService.getUserById(id);
+    @GetMapping("/user/{userName}")
+    public User getUser(@PathVariable String userName){
+        return userService.getUserByName(userName);
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
@@ -44,7 +44,7 @@ public class UserController {
 
     @CrossOrigin(origins = "http://localhost:3000")
     @DeleteMapping("/user/{id}")
-    public void deleteUserById(@PathVariable int id){
+    public void deleteUserByName(@PathVariable int id){
         userService.deleteUserById(id);
     }
 

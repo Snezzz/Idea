@@ -14,10 +14,10 @@ public class TestLombok {
     private int Id;
     public static void Testing(){
         TestLombok Test1=new TestLombok();
-        Test1.setId(1);
-        System.out.println(Test1.getId());
-        Test1.setName("User1");
-        System.out.println(Test1.getName());
+        Test1.Id = 1;
+        System.out.println(Test1.Id);
+        Test1.Name = "User1";
+        System.out.println(Test1.Name);
     }
 
 }
