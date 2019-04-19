@@ -17,31 +17,31 @@ public class NoteController {
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @GetMapping("notes")
+    @GetMapping("/notes")
     public List<Notes> getAllNotes() {
         return noteService.getAllNotes();
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @GetMapping("note/{id}")
-    public Notes getNoteById(@PathVariable("id") Integer id) {
+    @GetMapping("/note/{id}")
+    public Notes getNoteById(@PathVariable("id") int id) {
         return noteService.getNoteById(id);
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @PutMapping("note")
+    @PutMapping("/note")
     public void updateNote(@RequestBody Notes note) {
         noteService.updateNote(note);
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @DeleteMapping("note/{id}")
+    @DeleteMapping("/note/{id}")
     public void  deleteNote(@PathVariable("id") Integer id) {
         noteService.deleteNote(id);
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @PostMapping("note")
+    @PostMapping("/note")
     public void addNote(@RequestBody Notes note) {
         noteService.addNote(note);
     }

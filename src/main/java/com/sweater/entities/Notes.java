@@ -2,7 +2,6 @@ package com.sweater.entities;
 
 
 import com.sweater.enums.NoteType;
-import com.sweater.enums.Priority;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -24,14 +23,14 @@ public class Notes {
     private String text;
     private Date creationDate;
     private NoteType type;
-    private Priority priority;
+    private Integer priority;
     //getters and setters
 
    public Notes() {
 
     }
 
-   public Notes(int id, String title, int userId, Set<Tag> tags, String text, Date date, NoteType type,Priority priority) {
+   public Notes(int id, String title, int userId, Set<Tag> tags, String text, Date date, NoteType type,Integer priority) {
         this.id = id;
         this.title = title;
         this.userId = userId;
@@ -98,11 +97,11 @@ public class Notes {
         this.type = type;
     }
 
-    public Priority getPriority() {
+    public Integer getPriority() {
         return priority;
     }
 
-    public void setPriority(Priority priority) {
+    public void setPriority(Integer priority) {
         this.priority = priority;
     }
 }
